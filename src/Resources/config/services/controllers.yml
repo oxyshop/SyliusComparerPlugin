@@ -2,6 +2,7 @@ services:
 
     locastic_sylius_comparer_plugin.controller.action.list_comparer_products:
         class: Locastic\SyliusComparerPlugin\Controller\Action\ListComparerProductsAction
+        public: true
         arguments:
             - "@templating.engine.twig"
             - "@doctrine.orm.default_entity_manager"
@@ -10,6 +11,7 @@ services:
 
     locastic_sylius_comparer_plugin.controller.action.add_product_to_comparer:
         class: Locastic\SyliusComparerPlugin\Controller\Action\AddProductToComparerAction
+        public: true
         arguments:
             - "@sylius.repository.product"
             - "@locastic_sylius_comparer_plugin.repository.comparer"
@@ -22,6 +24,7 @@ services:
 
     locastic_sylius_comparer_plugin.controller.action.remove_product_from_comparer:
         class: Locastic\SyliusComparerPlugin\Controller\Action\RemoveProductFromComparerAction
+        public: true
         arguments:
             - "@locastic_sylius_comparer_plugin.repository.comparer_product"
             - "@locastic.sylius_comparer_plugin.utils.message_redirect_helper"
@@ -31,6 +34,7 @@ services:
 
     locastic.sylius_comparer_plugin.controller.action.render_header_template_action:
         class: Locastic\SyliusComparerPlugin\Controller\Action\RenderHeaderTemplateAction
+        public: true
         arguments:
             - '@templating.engine.twig'
             - '@locastic_sylius_comparer_plugin.context.comparer_context'
