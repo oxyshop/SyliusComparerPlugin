@@ -11,8 +11,9 @@ namespace Locastic\SyliusComparerPlugin\Factory;
 
 use Locastic\SyliusComparerPlugin\Entity\ComparerInterface;
 use Sylius\Component\Core\Model\ShopUserInterface;
+use Sylius\Component\Resource\Factory\FactoryInterface;
 
-interface ComparerFactoryInterface
+interface ComparerFactoryInterface extends FactoryInterface
 {
     public function createNew(): ComparerInterface;
 
